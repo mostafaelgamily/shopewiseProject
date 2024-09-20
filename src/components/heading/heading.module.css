@@ -1,0 +1,19 @@
+.heading_container h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.heading_container p {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .heading_container p {
+    margin: 0 auto;
+  }
+  .heading_container p {
+    width: 70%;
+  }
+}

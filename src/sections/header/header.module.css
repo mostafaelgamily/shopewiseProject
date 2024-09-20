@@ -1,0 +1,100 @@
+.header_bg {
+  /* background-image: url(./banner1.jpg); */
+  height: 45vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/***** Info *****/
+
+.header_info_container {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  text-align: left;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.header_info_container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.header_bg .header_info_container p {
+  margin-bottom: -10px;
+}
+
+/***** Arrows *****/
+
+.header_right_arrow,
+.header_left_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  padding: 10px 10px 5px 10px;
+  background-color: #ffffff;
+  z-index: 100;
+  display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.header_right_arrow:hover,
+.header_left_arrow:hover {
+  color: #ffffff;
+  background-color: #ff324d;
+}
+.header_left_arrow {
+  left: 30px;
+}
+
+.header_right_arrow {
+  right: 30px;
+}
+
+.header_bg:hover .header_left_arrow,
+.header_bg:hover .header_right_arrow {
+  display: block;
+}
+
+/* Styles for tablets and larger screens A */
+@media (min-width: 576px) {
+}
+
+/* Styles for tablets and larger screens B */
+@media (min-width: 768px) {
+  /* Full Nav */
+  .container {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header_info_container {
+    left: 15%;
+  }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 992px) {
+  /* Full Nav */
+  .container {
+    max-width: 940px;
+  }
+  .header_bg {
+    height: 55vh;
+  }
+  .header_info_container {
+    left: 10%;
+  }
+}

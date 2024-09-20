@@ -1,0 +1,141 @@
+/* 576 && 768 && 992 */
+
+.footer_container {
+  padding: 30px 60px;
+  background-color: #202325;
+  color: #ffffff;
+}
+
+.footer_content_container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.footer_content_container h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.footer_content_container h4 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer_content_container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer_content_container a:hover {
+  color: #ff324d;
+}
+
+.footer_content_container p {
+  margin-bottom: 10px;
+}
+
+.footer_copy {
+  margin-top: 30px;
+}
+
+.footer_form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.footer_form input {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  width: 200px;
+  border: 1px solid #eeeeee;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.footer_form .footer_submit {
+  background-color: #6a0dad;
+  width: 120px;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: background-color 0.3s ease-out;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -ms-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+}
+
+.footer_form .footer_submit:hover {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #6a0dad;
+}
+
+@media (min-width: 576px) {
+  .footer_form input {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .footer_container {
+    padding: 50px;
+  }
+
+  .footer_content_container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer_c {
+    margin-left: auto;
+  }
+
+  .footer_content_container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .footer_content_container h4 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    /* text-align: left; */
+  }
+
+  .footer_description {
+    width: 80%;
+  }
+
+  .footer_content_container p {
+    margin-bottom: 10px;
+  }
+  .footer_form input {
+    margin-right: auto;
+    width: 100%;
+  }
+  /* .footer_form .footer_submit {
+  } */
+}

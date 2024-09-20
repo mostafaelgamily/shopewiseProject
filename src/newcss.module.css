@@ -1,0 +1,21 @@
+/* 576 && 768 && 992 */
+
+.container {
+  padding: 30px;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 50px;
+  }
+  .content_container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
