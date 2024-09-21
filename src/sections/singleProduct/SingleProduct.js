@@ -3,7 +3,7 @@ import styles from "./singleProduct.module.css";
 import { Link, useParams } from "react-router-dom";
 import LgButton from "../../components/button/LgButton";
 import productsContext from "../../contexts/productsContext";
-import AddedToCart from "../../components/addedToCart/AddedToCart";
+// import AddedToCart from "../../components/addedToCart/AddedToCart";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { GrSubtractCircle } from "react-icons/gr";
 
@@ -88,7 +88,7 @@ const SingleProduct = () => {
             </di>
           </div>
         </div>
-        {cartAdded && <AddedToCart />}
+        {/* {cartAdded && <AddedToCart />} */}
       </div>
     </div>
   );

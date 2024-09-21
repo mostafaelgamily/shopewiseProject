@@ -9,12 +9,6 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "../../components/animatedSection/AnimatedSection";
 import LgButton from "../../components/button/LgButton";
 
-////////// Left To Do //////////
-//// * Change the Hero Images and Hero Info to ones from the given FakeAPI: https://fakestoreapi.com
-//// * Button Paths!
-//// 1. Changing Background Image & Info Text automatically every few seconds
-//// 2. Responsive Info Font Size
-
 const Header = () => {
   const [heroImageNum, setHeroImageNum] = useState(1);
   const [heroInfo, setHeroInfo] = useState({

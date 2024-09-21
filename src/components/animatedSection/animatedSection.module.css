@@ -1,0 +1,48 @@
+@keyframes slideUp {
+  from {
+    /*Startinvisible*/
+    opacity: 0;
+    /*Startfrom20pxbelow*/
+    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+  }
+  to {
+    /* End visible */
+    opacity: 1;
+    /*Endatitsoriginalposition*/
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+/* Style for the elements */
+.slideUp {
+  width: 100%;
+  /*Initiallyhidden*/
+  opacity: 0;
+  /*Startfrombelow*/
+  transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  -o-transform: translateY(40px);
+  /*Smoothtransition*/
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.inView {
+  /*Triggertheanimation*/
+  animation: slideUp 0.5s ease-out forwards;
+  -webkit-animation: slideUp 0.5s ease-out forwards;
+}

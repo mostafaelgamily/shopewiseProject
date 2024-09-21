@@ -3,7 +3,6 @@ import styles from "./cart.module.css";
 import productsContext from "../../contexts/productsContext";
 import LgButton from "../../components/button/LgButton";
 import { Link } from "react-router-dom";
-import { IoClose } from "react-icons/io5";
 import { GrSubtractCircle } from "react-icons/gr";
 import { IoMdAddCircleOutline } from "react-icons/io";
 

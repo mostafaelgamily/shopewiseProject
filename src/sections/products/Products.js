@@ -3,7 +3,7 @@ import styles from "./products.module.css";
 import Heading from "../../components/heading/Heading";
 import { Link } from "react-router-dom";
 import productsContext from "../../contexts/productsContext";
-import AddedToCart from "../../components/addedToCart/AddedToCart";
+// import AddedToCart from "../../components/addedToCart/AddedToCart";
 
 const Products = () => {
   const {
@@ -91,7 +91,7 @@ const Products = () => {
             <p>No products found</p>
           )}
         </div>
-        {cartAdded && <AddedToCart />}
+        {/* {cartAdded && <AddedToCart />} */}
       </div>
     </div>
   );
