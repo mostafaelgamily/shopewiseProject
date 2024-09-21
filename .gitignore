@@ -1,0 +1,39 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore git.py file
+git.py
+
+# Ignore all .zip files
+*.zip
+
+# Ignore build directory
+/build/
+
+# Ignore logs
+logs
+*.log
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore cache and temporary files
+.cache/
+tmp/
+*.tmp
+.DS_Store
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?
