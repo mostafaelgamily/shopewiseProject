@@ -13,14 +13,14 @@ const Header = () => {
   const [heroImageNum, setHeroImageNum] = useState(1);
   const [heroInfo, setHeroInfo] = useState({
     hero1: {
-      image: hero1,
-      title: "Women Fashion",
-      description: "Top Fashion",
-    },
-    hero2: {
       image: hero2,
       title: "Men Fashion",
       description: "Exclusive Products",
+    },
+    hero2: {
+      image: hero1,
+      title: "Women Fashion",
+      description: "Top Fashion",
     },
     hero3: {
       image: hero3,

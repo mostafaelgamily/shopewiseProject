@@ -12,12 +12,12 @@ const ProductsWrapper = ({ children }) => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
     totalUpdate();
   }, [cart]);
 
-  const [totalAmount, setTotalAmount] = useState(0);
   const totalUpdate = () => {
     let total = 0;
     // total += cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
