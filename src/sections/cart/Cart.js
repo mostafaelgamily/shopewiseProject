@@ -7,8 +7,15 @@ import { GrSubtractCircle } from "react-icons/gr";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
 const Cart = () => {
-  const { cart, emptyCart, removeFromCart, addToCart, subtractQuantity } =
-    useContext(productsContext);
+  const {
+    cart,
+    emptyCart,
+    removeFromCart,
+    addToCart,
+    subtractQuantity,
+    totalAmount,
+  } = useContext(productsContext);
+
   return (
     <div className={styles.cart_container}>
       <div className={styles.cart_content_container}>
@@ -57,21 +64,31 @@ const Cart = () => {
           </div>
         )}
         {cart?.length > 0 && (
-          <div className={styles.cart_buttons_container}>
-            <div className={styles.cart_add_button}>
-              <Link to="/products">
-                <LgButton name="Add Products" />
-              </Link>
+          <>
+            <div className={styles.cart_buttons_container}>
+              <div className={styles.cart_add_button}>
+                <Link to="/products">
+                  <LgButton name="Add Products" />
+                </Link>
+              </div>
+              <div
+                className={styles.cart_empty_button}
+                onClick={() => {
+                  emptyCart();
+                }}
+              >
+                <LgButton name="Empty Cart" />
+              </div>
             </div>
-            <div
-              className={styles.cart_empty_button}
-              onClick={() => {
-                emptyCart();
-              }}
-            >
-              <LgButton name="Empty Cart" />
+            <div className={styles.cart_total_container}>
+              <p>Total: ${totalAmount}</p>
+              <div className={styles.cart_checkout_button}>
+                <Link to="/checkout">
+                  <LgButton name="Checkout" />
+                </Link>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </div>

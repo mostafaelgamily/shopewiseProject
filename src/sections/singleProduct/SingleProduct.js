@@ -69,7 +69,6 @@ const SingleProduct = () => {
               <div
                 onClick={() => {
                   addToCart(product, quantity);
-                  console.log("Done");
                 }}
               >
                 <LgButton name="Add To Cart" />

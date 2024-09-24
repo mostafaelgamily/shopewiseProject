@@ -13,6 +13,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import FaqPage from "./pages/FaqPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />

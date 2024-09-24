@@ -5,6 +5,12 @@ const Login = ({ profilesData, onLoginSuccess, setTargetProfile }) => {
   const [profiles, setProfiles] = useState();
   const [checkProfile, setCheckProfile] = useState({});
 
+  // const handleLogin = (e) => {
+  //   e.preventDefault();
+  //   // const formData = new FormData(e.target);
+  //   // console.log(formData.get("file"));
+  // };
+
   const handleLogin = (e) => {
     e.preventDefault();
     for (let i = 0; i < profiles.length; i++) {
@@ -32,6 +38,7 @@ const Login = ({ profilesData, onLoginSuccess, setTargetProfile }) => {
             <input
               type="username"
               placeholder="Your Username"
+              name="username"
               onChange={(e) => {
                 setCheckProfile({ ...checkProfile, username: e.target.value });
               }}
@@ -39,6 +46,7 @@ const Login = ({ profilesData, onLoginSuccess, setTargetProfile }) => {
             <input
               type="password"
               placeholder="Password"
+              name="password"
               onChange={(e) => {
                 setCheckProfile({ ...checkProfile, password: e.target.value });
               }}

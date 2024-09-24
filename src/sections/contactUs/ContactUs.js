@@ -9,11 +9,7 @@ const ContactUs = () => {
           <AnimatedSection>
             <div className={styles.contact_heading}>
               <h3>Get in Touch</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus blandit massa enim. Nullam id varius nunc id varius
-                nunc.
-              </p>
+              <p>Contact us for any questions, feedback, or just to say hi!</p>
             </div>
           </AnimatedSection>
         </div>

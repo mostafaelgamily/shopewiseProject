@@ -12,6 +12,25 @@ const ProductsWrapper = ({ children }) => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
+
+  useEffect(() => {
+    totalUpdate();
+  }, [cart]);
+
+  const [totalAmount, setTotalAmount] = useState(0);
+  const totalUpdate = () => {
+    let total = 0;
+    // total += cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    for (let i = 0; i < cart.length; i++) {
+      total += cart[i].price * cart[i].quantity;
+      console.log(cart[i]);
+      console.log(
+        `${cart[i].title} total: ${total}, Quantity: ${cart[i].quantity}`
+      );
+    }
+    setTotalAmount(total);
+  };
+
   const [cartAdded, setCartAdded] = useState(false);
 
   const addToCart = (product, q) => {
@@ -27,8 +46,8 @@ const ProductsWrapper = ({ children }) => {
       // If the product doesn't exist, add it with quantity 1
       updatedCart = [...cart, { ...product, quantity: quantity }];
     }
-    changeCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    changeCart(updatedCart);
     setCartAdded(true);
     const timeoutId = setTimeout(() => {
       setCartAdded(false);
@@ -92,8 +111,6 @@ const ProductsWrapper = ({ children }) => {
         );
         setLoading(false);
       });
-
-    console.log(cart);
   }, [category, cart]);
   return (
     <div>
@@ -110,6 +127,8 @@ const ProductsWrapper = ({ children }) => {
           emptyCart,
           removeFromCart,
           subtractQuantity,
+          totalAmount,
+          totalUpdate,
         }}
       >
         {children}
