@@ -57,7 +57,7 @@
   background-color: var(--background-color);
   width: 300px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid var(--text-color);
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -108,6 +108,7 @@
 @media (min-width: 768px) {
   .contact_form {
     width: 350px;
+    padding: 20px;
   }
   .contact_form input {
     width: 300px;
