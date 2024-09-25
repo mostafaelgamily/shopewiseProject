@@ -6,7 +6,7 @@
   display: block;
   width: 28px;
   height: 3px;
-  background-color: var(--text-color);
+  background-color: #030303;
   margin-top: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;

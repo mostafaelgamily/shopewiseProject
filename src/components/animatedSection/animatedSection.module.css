@@ -42,7 +42,7 @@
 }
 
 .inView {
-  /*Triggertheanimation*/
+  /* Trigger the animation */
   animation: slideUp 0.5s ease-out forwards;
   -webkit-animation: slideUp 0.5s ease-out forwards;
 }
