@@ -2,6 +2,7 @@
 
 .cart_container {
   padding: 30px;
+  background-color: var(--background-color);
 }
 
 .cart_cards_container {
@@ -28,6 +29,7 @@
   -o-border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
+  background-color: #ffffff;
 }
 
 .cart_card a {
@@ -115,10 +117,6 @@
   margin: 25px auto 0 auto;
 }
 
-.cart_checkout_button {
-  /* margin: auto; */
-}
-
 .quantity_counter {
   display: flex;
   align-items: center;
@@ -142,6 +140,10 @@
 .quantity_icon_subtract:hover,
 .quantity_icon_add:hover {
   color: #ff324d;
+}
+
+.cart_total {
+  color: var(--text-color);
 }
 
 .cart_total_container {

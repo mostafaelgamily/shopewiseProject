@@ -2,6 +2,7 @@
 
 .qs_container {
   padding: 30px;
+  background-color: var(--background-color);
 }
 
 .qs {
@@ -9,6 +10,7 @@
   padding: 0px 15px;
   border: 1px solid #eeeeee;
   border-radius: 10px;
+  color: var(--text-color);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;

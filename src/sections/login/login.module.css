@@ -2,6 +2,7 @@
 
 .login_container {
   padding: 30px;
+  background-color: var(--background-color);
 }
 
 .login_box {
@@ -19,7 +20,8 @@
   text-align: left;
   width: 80%;
   margin-top: 0;
-  font-size: 1.6remrem;
+  font-size: 1.6rem;
+  color: var(--text-color);
 }
 
 .login_box form {

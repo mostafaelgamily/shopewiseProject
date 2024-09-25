@@ -14,28 +14,31 @@ import FaqPage from "./pages/FaqPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import CheckoutPage from "./pages/CheckoutPage";
+import ThemeWrapper from "./contexts/ThemeWrapper";
 
 function App() {
   return (
     <div className="App">
-      <UsersWrapper>
-        <ProductsWrapper>
-          <Nav />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductPage />} />
-            <Route path="/products/:id" element={<SingleProductPage />} />
-            <Route path="/account" element={<AccountPage />} />
-            <Route path="/faq" element={<FaqPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-          <Footer />
-        </ProductsWrapper>
-      </UsersWrapper>
+      <ThemeWrapper>
+        <UsersWrapper>
+          <ProductsWrapper>
+            <Nav />
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/products" element={<ProductPage />} />
+              <Route path="/products/:id" element={<SingleProductPage />} />
+              <Route path="/account" element={<AccountPage />} />
+              <Route path="/faq" element={<FaqPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/checkout" element={<CheckoutPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+            <Footer />
+          </ProductsWrapper>
+        </UsersWrapper>
+      </ThemeWrapper>
     </div>
   );
 }

@@ -41,7 +41,8 @@
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   padding: 10px 10px 5px 10px;
-  background-color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   z-index: 100;
   display: none;
   cursor: pointer;
@@ -51,8 +52,7 @@
 
 .header_right_arrow:hover,
 .header_left_arrow:hover {
-  color: #ffffff;
-  background-color: #ff324d;
+  background-color: var(--primary-color);
 }
 .header_left_arrow {
   left: 30px;

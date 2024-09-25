@@ -1,7 +1,7 @@
 /* 576 && 768 && 992 */
 
 .contact_container {
-  background-color: #888;
+  background-color: var(--background-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@
 .contact_form {
   position: relative;
   z-index: 10;
-  color: #ffffff;
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +54,11 @@
 }
 
 .contact_form {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   width: 300px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--text-color);
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -67,7 +67,7 @@
 }
 
 .contact_form input {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   padding: 15px 15px;
   width: 250px;
   margin: 15px 0;
@@ -80,9 +80,9 @@
 }
 
 .contact_form .contact_submit {
-  color: #ff324d;
+  color: var(--primary-color);
   background-color: transparent;
-  border: 1px solid #ff324d;
+  border: 1px solid var(--primary-color);
   width: 150px;
   cursor: pointer;
   border-radius: 20px;
@@ -98,8 +98,8 @@
 }
 
 .contact_form .contact_submit:hover {
-  background-color: #ff324d;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 @media (min-width: 576px) {
@@ -132,6 +132,7 @@
     /* margin-right: 100px; */
   }
   .contact_heading p {
+    width: 85%;
     margin: 0;
     padding-bottom: 15px;
   }

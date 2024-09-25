@@ -1,3 +1,8 @@
+.heading_container h3,
+.heading_container p {
+  color: var(--text-color) !important;
+}
+
 .heading_container h3 {
   font-size: 2rem;
   margin-bottom: 10px;

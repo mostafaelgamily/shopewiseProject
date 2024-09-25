@@ -2,6 +2,7 @@
 
 .account_info_container {
   padding: 30px;
+  background-color: var(--background-color);
 }
 
 .account_info_content_container {
@@ -9,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--text-color);
 }
 
 .account_info_content_container .sign_out_button {

@@ -81,7 +81,7 @@ const Cart = () => {
               </div>
             </div>
             <div className={styles.cart_total_container}>
-              <p>Total: ${totalAmount}</p>
+              <p className={styles.cart_total}>Total: ${totalAmount}</p>
               <div className={styles.cart_checkout_button}>
                 <Link to="/checkout">
                   <LgButton name="Checkout" />
