@@ -21,7 +21,7 @@ const Cart = () => {
       <div className={styles.cart_content_container}>
         {cart?.length == 0 ? (
           <>
-            <h3>Cart is Empty</h3>
+            <h3 className={styles.cart_empty_message}>Cart is Empty</h3>
             <div className={styles.cart_add_button}>
               <Link to="/products">
                 <LgButton name="Add Products" />
