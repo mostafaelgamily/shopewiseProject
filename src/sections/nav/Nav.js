@@ -24,12 +24,12 @@ const Nav = ({ toggleMode, mode }) => {
 
         <div className={styles.nav_icons_container}>
           <div
-            style={{ cursor: "pointer" }}
+            className={styles.theme_icon}
             onClick={() => {
               toggleTheme();
             }}
           >
-            <FaLightbulb style={{ marginBottom: "3px" }} />
+            <FaLightbulb />
           </div>
           <Link to="/account">
             <VscAccount />

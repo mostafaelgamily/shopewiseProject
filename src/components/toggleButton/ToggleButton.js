@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styles from "./toggleButton.module.css";
 
 const ToggleButton = ({ navToggle, setNavToggle }) => {
