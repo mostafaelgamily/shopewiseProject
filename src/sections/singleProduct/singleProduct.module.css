@@ -83,7 +83,7 @@
 
 .quantity_counter h4 {
   font-size: 1.2rem;
-  color: #222;
+  color: var(--text-color);
 }
 
 .quantity_icon_subtract {
@@ -97,7 +97,7 @@
 .quantity_icon_subtract,
 .quantity_icon_add {
   cursor: pointer;
-  color: #222;
+  color: var(--text-color);
 }
 
 .quantity_icon_subtract:hover,
