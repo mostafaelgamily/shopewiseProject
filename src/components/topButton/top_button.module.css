@@ -1,0 +1,12 @@
+.top_button_container {
+  position: fixed;
+  right: 25px;
+  bottom: 20px;
+  z-index: 999999;
+  cursor: pointer;
+}
+
+.top_button_container svg {
+  color: var(--text-color);
+  font-size: 2rem;
+}

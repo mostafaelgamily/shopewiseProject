@@ -15,6 +15,7 @@ import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import CheckoutPage from "./pages/CheckoutPage";
 import ThemeWrapper from "./contexts/ThemeWrapper";
+import TopButton from "./components/topButton/TopButton";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
+            <TopButton />
             <Footer />
           </ProductsWrapper>
         </UsersWrapper>
