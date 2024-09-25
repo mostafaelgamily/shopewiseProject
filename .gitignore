@@ -37,3 +37,4 @@ tmp/
 Thumbs.db
 ehthumbs.db
 Icon?
+/dist/

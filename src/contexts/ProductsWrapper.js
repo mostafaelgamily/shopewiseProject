@@ -28,6 +28,7 @@ const ProductsWrapper = ({ children }) => {
         `${cart[i].title} total: ${total}, Quantity: ${cart[i].quantity}`
       );
     }
+    total = total.toFixed(2);
     setTotalAmount(total);
   };
 
