@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const ThemeWrapper = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "dark";
+    return localStorage.getItem("theme") || "light";
   });
 
   const toggleTheme = () => {
