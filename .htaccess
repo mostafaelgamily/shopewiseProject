@@ -1,0 +1,15 @@
+
+# Allow access to index.html
+<Files "indexx.html">
+    Require all granted
+</Files>
+
+# Ensure DirectoryIndex is set
+DirectoryIndex indexx.html
+
+# Redirect all requests to index.html
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /indexx.html [L]
