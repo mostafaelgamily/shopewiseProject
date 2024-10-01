@@ -32,7 +32,7 @@ const Products = () => {
 
   return (
     <div className={styles.products_container}>
-      <Heading title={"Products"} hcolor={"#000000"} />
+      <Heading title={"Products"} />
       <div className={styles.products_content_container}>
         <div className={styles.products_links}>
           <p

@@ -1,4 +1,5 @@
 import styles from "./heading.module.css";
+import PropTypes from "prop-types";
 // import AnimatedSection from "../animatedSection/AnimatedSection";
 
 const Heading = ({ title, description, hcolor, pcolor }) => {
@@ -16,4 +17,9 @@ const Heading = ({ title, description, hcolor, pcolor }) => {
 
 export default Heading;
 
-//  style={{ color: "#ff5733" }}
+Heading.propTypes = {
+  title: PropTypes.node.isRequired,
+  description: PropTypes.node,
+  hcolor: PropTypes.node,
+  pcolor: PropTypes.node,
+};

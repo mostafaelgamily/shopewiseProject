@@ -17,12 +17,7 @@ const Qs = () => {
   return (
     <div className={styles.qs_container}>
       <AnimatedSection>
-        <Heading
-          title="Frequently Asked Questions"
-          description=""
-          hcolor="#0d141a"
-          pcolor="#56585e"
-        />
+        <Heading title="Frequently Asked Questions" description="" />
       </AnimatedSection>
       <div className={styles.qs_content_container}>
         {Object.keys(qs).map((e) => (
