@@ -50,10 +50,15 @@ const Nav = ({
 }) => {
   const [navToggle, setNavToggle] = useState(false);
   const { cart } = useContext(productsContext); // Expecting an array of cart items
-  const { theme } = useContext(themeContext); // Expecting 'light' or 'dark' theme
+  const { shopWiseTheme } = useContext(themeContext); // Expecting 'light' or 'dark' theme
 
   // Handle theme-based logo switching
-  const logo = theme === "dark" ? logoWhite : logoBlack;
+  const logo =
+    shopWiseTheme === "dark"
+      ? logoWhite
+      : shopWiseTheme === "light"
+      ? logoBlack
+      : "";
 
   return (
     <div className={styles.nav_container}>
