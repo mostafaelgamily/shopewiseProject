@@ -88,7 +88,7 @@ const Nav = ({
           )}
 
           {/* ToggleButton for mobile nav */}
-          <div className={navToggle && styles.nav_open}>
+          <div className={navToggle ? styles.nav_open : ""}>
             <ToggleButton navToggle={navToggle} setNavToggle={setNavToggle} />
           </div>
 

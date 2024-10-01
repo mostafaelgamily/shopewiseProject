@@ -24,10 +24,6 @@ const ProductsWrapper = ({ children }) => {
     // total += cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     for (let i = 0; i < cart.length; i++) {
       total += cart[i].price * cart[i].quantity;
-      console.log(cart[i]);
-      console.log(
-        `${cart[i].title} total: ${total}, Quantity: ${cart[i].quantity}`
-      );
     }
     total = total.toFixed(2);
     setTotalAmount(total);
