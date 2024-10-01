@@ -6,8 +6,6 @@ import ToggleButton from "./ToggleButton";
 import productsContext from "../../contexts/productsContext";
 import themeContext from "../../contexts/themeContext";
 import { IoBulb } from "react-icons/io5";
-import logoBlack from "../../assets/logoBlack.png"; // Default light theme logo
-import logoWhite from "../../assets/logoWhite.png"; // Default dark theme logo
 
 /**
  * Nav Component:
@@ -50,15 +48,13 @@ const Nav = ({
 }) => {
   const [navToggle, setNavToggle] = useState(false);
   const { cart } = useContext(productsContext); // Expecting an array of cart items
-  const { shopWiseTheme } = useContext(themeContext); // Expecting 'light' or 'dark' theme
+  const { theme } = useContext(themeContext); // Expecting 'light' or 'dark' theme
+
+  const { logoBlack, logoWhite } = useContext(themeContext);
 
   // Handle theme-based logo switching
   const logo =
-    shopWiseTheme === "dark"
-      ? logoWhite
-      : shopWiseTheme === "light"
-      ? logoBlack
-      : "";
+    theme === "dark" ? logoWhite : theme === "light" ? logoBlack : "";
 
   return (
     <div className={styles.nav_container}>
