@@ -41,7 +41,7 @@
   -o-transform: rotate(-45deg) translate(5px, -6px);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .nav_toggle_icon_container {
     display: none;
   }

@@ -37,6 +37,7 @@ function App() {
             onThemeToggle={toggleTheme}
             AccountIcon={<VscAccount />}
             CartIcon={<IoCartOutline />}
+            layout="spread"
           />
           <ScrollToTop />
           <Routes>
