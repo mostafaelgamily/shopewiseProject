@@ -15,7 +15,6 @@ import ContactPage from "./pages/ContactPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import NotFoundPage from "./pages/NotFoundPage";
-
 import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
 import themeContext from "./contexts/themeContext";
