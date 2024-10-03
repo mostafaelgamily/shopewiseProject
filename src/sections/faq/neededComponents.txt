@@ -1,0 +1,12 @@
+Faq:
+import Heading from "../../components/heading/Heading";
+
+import AnimatedSection from "../../components/animatedSection/AnimatedSection";
+
+import FaqItem from "./FaqItem";
+
+------------------------------------------
+
+FaqItem:
+
+import AnimatedSection from "../../components/animatedSection/AnimatedSection";
