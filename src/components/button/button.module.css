@@ -1,0 +1,58 @@
+.button {
+  border-radius: 30px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  padding: 10px 20px; /* Fallback size */
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+/* Small size (sm) */
+.button_sm {
+  padding: 10px 20px;
+  font-size: 0.75rem;
+}
+
+/* Medium size (md) - default */
+.button_md {
+  padding: 15px 30px;
+  font-size: 0.9rem;
+}
+
+/* Large size (lg) */
+.button_lg {
+  padding: 20px 40px;
+  font-size: 1.1rem;
+}
+
+/* Extra Large size (xl) */
+.button_xl {
+  padding: 25px 50px;
+  font-size: 1.25rem;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  .button_sm {
+    font-size: 0.85rem;
+  }
+
+  .button_md {
+    font-size: 1rem;
+    padding: 20px 40px;
+  }
+
+  .button_lg {
+    font-size: 1.25rem;
+    padding: 25px 50px;
+  }
+
+  .button_xl {
+    font-size: 1.5rem;
+    padding: 30px 60px;
+  }
+}

@@ -22,7 +22,6 @@ import productsContext from "./contexts/productsContext";
 function App() {
   const { theme, toggleTheme, logoBlack, logoWhite } = useContext(themeContext);
   const { cart } = useContext(productsContext);
-
   return (
     <>
       <Nav

@@ -20,6 +20,12 @@
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
+
+.header_info_container h2,
+.header_info_container p {
+  color: #1a1a1a;
+}
+
 .header_info_container h2 {
   font-size: 2rem;
   margin-bottom: 15px;

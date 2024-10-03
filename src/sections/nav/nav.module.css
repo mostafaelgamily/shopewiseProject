@@ -40,7 +40,7 @@
 }
 
 .nav_icons_container a:hover svg {
-  color: var(--primary-color);
+  color: var(--light-primary-color);
 }
 
 .nav_links_container {
@@ -92,7 +92,7 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--light-primary-color);
   transition: width 0.3s ease-out, left 0.3s ease-out;
   -webkit-transition: width 0.3s ease-out, left 0.3s ease-out;
   -moz-transition: width 0.3s ease-out, left 0.3s ease-out;

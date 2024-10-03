@@ -1,9 +1,9 @@
-import logoBlack from "../assets/logoBlack.png"; // Default light theme logo
-import logoWhite from "../assets/logoWhite.png"; // Default dark theme logo
-
 import { useEffect, useState } from "react";
 import themeContext from "./themeContext";
 import PropTypes from "prop-types";
+
+import logoBlack from "../assets/logoBlack.png"; // Default light theme logo
+import logoWhite from "../assets/logoWhite.png"; // Default dark theme logo
 
 /**
  * ThemeWrapper component provides the theme context for children components.
@@ -23,12 +23,12 @@ import PropTypes from "prop-types";
  */
 const ThemeWrapper = ({
   children,
-  defaultTheme = "light",
+  defaultTheme = "dark",
   storage = localStorage,
 }) => {
-  // Internal state variable is named 'theme', but it's persisted with key 'shopWiseTheme'
+  // Internal state variable is named 'theme', but it's persisted with key 'shopewiseThemeTheme'
   const [theme, setTheme] = useState(() => {
-    return storage.getItem("shopWiseTheme") || defaultTheme;
+    return storage.getItem("shopewiseThemeTheme") || defaultTheme;
   });
 
   const toggleTheme = () => {
@@ -39,8 +39,8 @@ const ThemeWrapper = ({
     // Apply the theme to the document root element
     document.documentElement.setAttribute("data-theme", theme);
 
-    // Persist the theme in the provided storage with the key 'shopWiseTheme'
-    storage.setItem("shopWiseTheme", theme);
+    // Persist the theme in the provided storage with the key 'shopewiseThemeTheme'
+    storage.setItem("shopewiseThemeTheme", theme);
   }, [theme, storage]);
 
   return (
