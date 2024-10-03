@@ -56,6 +56,9 @@ const Nav = ({
   const logo =
     theme === "dark" ? logoWhite : theme === "light" ? logoBlack : "";
 
+  const linkHeight = 65; // Each link takes 65px of height (as per your ratio)
+  const navHeight = links.length * linkHeight; // Total height based on number of links
+
   return (
     <div className={styles.nav_container}>
       <div className={styles.nav_content_container}>
@@ -93,7 +96,10 @@ const Nav = ({
           </div>
 
           {/* Navigation Links */}
-          <div className={styles.nav_links_container}>
+          <div
+            className={styles.nav_links_container}
+            style={{ height: navToggle ? `${navHeight}px` : "" }}
+          >
             {links.map((link) => (
               <NavLink
                 key={link.path}
