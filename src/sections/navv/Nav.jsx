@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./nav.module.css";
 import { Link, NavLink } from "react-router-dom";
 import ToggleButton from "./ToggleButton";
+import productsContext from "../../contexts/productsContext";
+import themeContext from "../../contexts/themeContext";
 import { IoBulb } from "react-icons/io5";
 
 /**
@@ -18,10 +20,6 @@ import { IoBulb } from "react-icons/io5";
  * @prop {function} onThemeToggle - A callback function to handle theme changes.
  * @prop {component} AccountIcon - Optional account icon component (can be null).
  * @prop {component} CartIcon - Optional cart icon component (can be null).
- * @prop {string} logoBlack - Black Logo Shown in Light Theme
- * @prop {string} logoWhite - White Logo shown in Dark Theme
- * @prop {array} cart - Optonaly array of cart items
- * @prop {string} Theme - "light" or "dark"
  *
  * Explanation for props:
  *
@@ -37,9 +35,6 @@ import { IoBulb } from "react-icons/io5";
  *      { path: "/contact", label: "Contact" }
  *    ]}
  *    onThemeToggle={toggleTheme}
- *    logoBlack={logoBlack}
- *    logoWhite={logoWhite}
- *    theme={portfolioTheme}
  *    AccountIcon={<VscAccount />}
  *    CartIcon={<IoCartOutline />}
  * />
@@ -50,12 +45,12 @@ const Nav = ({
   onThemeToggle = null, // default to null if not provided
   AccountIcon = null, // default to null if not provided
   CartIcon = null, // default to null if not provided
-  logoBlack = "",
-  logoWhite = "",
-  cart,
-  theme,
 }) => {
   const [navToggle, setNavToggle] = useState(false);
+  const { cart } = useContext(productsContext); // Expecting an array of cart items
+  const { theme } = useContext(themeContext); // Expecting 'light' or 'dark' theme
+
+  const { logoBlack, logoWhite } = useContext(themeContext);
 
   // Handle theme-based logo switching
   const logo =
@@ -131,10 +126,6 @@ Nav.propTypes = {
   onThemeToggle: PropTypes.func,
   AccountIcon: PropTypes.element,
   CartIcon: PropTypes.element,
-  logoBlack: PropTypes.string.isRequired,
-  logoWhite: PropTypes.string.isRequired,
-  cart: PropTypes.array,
-  theme: PropTypes.string.isRequired,
 };
 
 export default Nav;
