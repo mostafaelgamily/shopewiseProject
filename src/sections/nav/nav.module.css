@@ -23,6 +23,11 @@
   gap: 20px;
 }
 
+.nav_img_link {
+  max-height: 60px;
+  overflow-y: hidden;
+}
+
 .nav_content_container img {
   width: 160px;
 }

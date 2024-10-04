@@ -68,7 +68,7 @@ const Nav = ({
     <div className={styles.nav_container}>
       <div className={styles.nav_content_container}>
         {/* Logo based on current theme */}
-        <Link to={"/"}>
+        <Link to={"/"} className={styles.nav_img_link}>
           <img src={logo} alt="Logo" />
         </Link>
 
