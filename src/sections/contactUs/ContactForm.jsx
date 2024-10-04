@@ -15,6 +15,8 @@ import styles from "./contactForm.module.css";
  *   required: boolean      // Whether the input field is required for submission
  * }
  *
+ * @prop {bool} bg - A Boolean indicating wether to display a background image or not
+ *
  * @prop {function} onSubmit - A function that will be called when the form is submitted.
  * It receives the event as a parameter. This is an optional prop, and if not provided,
  * the default behavior will be a no-op (i.e., the form will not submit any data).
@@ -30,15 +32,25 @@ import styles from "./contactForm.module.css";
  * />
  */
 
-const ContactForm = ({ formFields, onSubmit }) => {
+const ContactForm = ({ formFields, bg, onSubmit }) => {
   return (
-    <form className={styles.contact_form} onSubmit={onSubmit}>
+    <form
+      className={styles.contact_form}
+      onSubmit={onSubmit}
+      style={{
+        borderColor: bg ? "#ffffff" : "var(--text-color)",
+        backgroundColor: bg ? "#ffffff" : "transparent",
+      }}
+    >
       {formFields.map((field, index) => (
         <input
           key={index}
           type={field.type}
           placeholder={field.placeholder}
           required={field.required}
+          style={{
+            backgroundColor: bg && "#ffffff",
+          }}
         />
       ))}
       <input type="submit" className={styles.contact_submit} />
@@ -54,6 +66,7 @@ ContactForm.propTypes = {
       required: PropTypes.bool.isRequired,
     })
   ).isRequired,
+  bg: PropTypes.bool,
   onSubmit: PropTypes.func.isRequired,
 };
 export default ContactForm;

@@ -11,7 +11,7 @@ import logoWhite from "../assets/logoWhite.png"; // Default dark theme logo
  *
  * @param {object} props - Props for ThemeWrapper
  * @param {React.ReactNode} props.children - The child components wrapped by ThemeWrapper
- * @param {string} [props.defaultTheme="light"] - The default theme to be applied if no theme is stored
+ * @param {string} [props.defaultTheme="dark"] - The default theme to be applied if no theme is stored
  * @param {Storage} [props.storage=localStorage] - Storage mechanism for persisting theme (e.g., localStorage)
  *
  * Usage Example:

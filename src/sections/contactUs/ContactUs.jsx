@@ -19,6 +19,8 @@ import ContactForm from "./ContactForm";
  *   Address: Array<string> // An array of physical addresses
  * }
  *
+ * @prop {bool} bg - (By Default False) A Boolean indicating wether to display a background image or not
+ *
  * @prop {string} backgroundImage - A string URL for the background image of the contact section.
  * This will be applied as a CSS `background-image`. If not provided, no image will be shown.
  *
@@ -53,6 +55,7 @@ import ContactForm from "./ContactForm";
 
 const ContactUs = ({
   contactInfo = { Email: [], Phone: [], Address: [] }, // Default value
+  bg = false,
   backgroundImage = "", // Default value
   formFields,
   onFormSubmit = () => {}, // Default value
@@ -74,35 +77,51 @@ const ContactUs = ({
     <div
       className={styles.contact_container}
       style={{
-        backgroundImage: backgroundImage ? `url(${backgroundImage})` : "",
+        backgroundImage: bg && backgroundImage ? `url(${backgroundImage})` : "",
         backgroundColor: !backgroundImage && "var(--background-color)",
       }}
     >
-      <div className={styles.contact_content_container}>
-        <div className={styles.contact_content}>
-          <AnimatedSection>
-            <div className={styles.contact_heading}>
-              <h3>Get in Touch</h3>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection>
-            <div className={styles.contact_info}>
-              {Object.keys(contact).map((category) => (
-                <div key={category}>
-                  <h4>{category}</h4>
-                  {contact[category].map((item) => (
-                    <div key={item}>
-                      <p>{item}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
+      <div className={bg ? styles.overlay : ""}>
+        <div className={styles.contact_content_container}>
+          <div className={styles.contact_content}>
+            <AnimatedSection>
+              <div className={styles.contact_heading}>
+                <h3 style={{ color: bg ? "#ffffff" : "var(--text-color)" }}>
+                  Get in Touch
+                </h3>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection>
+              <div className={styles.contact_info}>
+                {Object.keys(contact).map((category) => (
+                  <div key={category}>
+                    <h4 style={{ color: bg ? "#ffffff" : "var(--text-color)" }}>
+                      {category}
+                    </h4>
+                    {contact[category].map((item) => (
+                      <div key={item}>
+                        <p
+                          style={{
+                            color: bg ? "#ffffff" : "var(--text-color)",
+                          }}
+                        >
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+          </div>
+          <AnimatedSection widthOption="fitContent">
+            <ContactForm
+              formFields={formFields}
+              onSubmit={handleFormSubmit}
+              bg={bg}
+            />
           </AnimatedSection>
         </div>
-        <AnimatedSection widthOption="fitContent">
-          <ContactForm formFields={formFields} onSubmit={handleFormSubmit} />
-        </AnimatedSection>
       </div>
     </div>
   );
@@ -114,6 +133,7 @@ ContactUs.propTypes = {
     Phone: PropTypes.arrayOf(PropTypes.string),
     Address: PropTypes.arrayOf(PropTypes.string),
   }), // Structured contact info
+  bg: PropTypes.bool,
   backgroundImage: PropTypes.string, // Background image URL (optional)
   formFields: PropTypes.arrayOf(
     PropTypes.shape({
