@@ -8,7 +8,7 @@ const HomePage = () => {
     <div>
       <NavSpacer />
       <Header />
-      <Products />
+      <Products limit={5} />
       <ContactUs
         contactInfo={{
           Email: ["contact@shopewise.com"],

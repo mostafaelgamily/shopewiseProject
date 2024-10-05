@@ -3,9 +3,10 @@ import styles from "./products.module.css";
 import Heading from "../../components/heading/Heading";
 import { Link } from "react-router-dom";
 import productsContext from "../../contexts/productsContext";
+import PropTypes from "prop-types";
 // import AddedToCart from "../../components/addedToCart/AddedToCart";
 
-const Products = () => {
+const Products = ({ limit = 1000 }) => {
   const {
     products,
     loading,
@@ -68,25 +69,31 @@ const Products = () => {
         </div>
         <div className={styles.products_cards}>
           {products.length > 0 ? (
-            products.map((p) => (
-              <div key={p.id} className={styles.products_card}>
-                <Link
-                  to={`/products/${p.id}`}
-                  className={styles.products_product_link}
-                >
-                  <img src={p.image} alt={p.title} />
-                  <h5 className={styles.products_product_title}>{p.title}</h5>
-                  <h5 className={styles.product_price}>${p.price}</h5>
-                </Link>
-                <button
-                  onClick={() => {
-                    addToCart(p, 1);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            ))
+            products.map((p, index) => {
+              if (index < limit) {
+                return (
+                  <div key={p.id} className={styles.products_card}>
+                    <Link
+                      to={`/products/${p.id}`}
+                      className={styles.products_product_link}
+                    >
+                      <img src={p.image} alt={p.title} />
+                      <h5 className={styles.products_product_title}>
+                        {p.title}
+                      </h5>
+                      <h5 className={styles.product_price}>${p.price}</h5>
+                    </Link>
+                    <button
+                      onClick={() => {
+                        addToCart(p, 1);
+                      }}
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                );
+              }
+            })
           ) : (
             <p>No products found</p>
           )}
@@ -95,6 +102,10 @@ const Products = () => {
       </div>
     </div>
   );
+};
+
+Products.propTypes = {
+  limit: PropTypes.int,
 };
 
 export default Products;
