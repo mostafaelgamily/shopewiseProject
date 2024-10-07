@@ -38,7 +38,7 @@ const ContactForm = ({ formFields, bg, onSubmit }) => {
       className={styles.contact_form}
       onSubmit={onSubmit}
       style={{
-        borderColor: bg ? "#ffffff" : "var(--text-color)",
+        borderColor: bg ? "#ffffff" : "var(--card-background-color)",
         backgroundColor: bg ? "#ffffff" : "transparent",
       }}
     >

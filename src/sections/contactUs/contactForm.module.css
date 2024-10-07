@@ -1,19 +1,14 @@
 .contact_form {
   position: relative;
   z-index: 10;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-.contact_form {
-  /* background-color: #ffffff; */
   width: 300px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ffffff;
+  border: 2px solid var(--card-background-color);
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -22,11 +17,11 @@
 }
 
 .contact_form input {
-  background-color: #ffffff;
+  background-color: var(--card-background-color);
   padding: 15px 15px;
   width: 250px;
   margin: 15px 0;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--card-background-color);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
