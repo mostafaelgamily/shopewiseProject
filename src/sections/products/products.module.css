@@ -45,13 +45,13 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  background-color: #ffffff;
+  background-color: var(--card-background-color);
   box-shadow: rgba(77, 77, 77, 0.35) 0px 5px 15px;
 }
 
 .products_card a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -72,6 +72,7 @@
   border: 1px solid var(--primary-color);
   background-color: transparent;
   border-radius: 5px;
+  color: var(--text-color);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;

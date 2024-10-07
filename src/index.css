@@ -5,18 +5,21 @@
   --primary-color: #ff324d;
   --light-primary-color: #ff324d;
   --background-color: #ffffff;
+  --card-background-color: #f9f9f9;
   --text-color: #1a1a1a;
   --secondary-text-color: #56585e;
 }
 
 [data-theme="light"] {
   --background-color: #ffffff;
+  --card-background-color: #f9f9f9;
   --text-color: #1a1a1a;
   --secondary-text-color: #56585e;
 }
 
 [data-theme="dark"] {
   --background-color: #202325;
+  --card-background-color: #303030;
   --text-color: #ffffff;
   --secondary-text-color: #ffffff;
 }
