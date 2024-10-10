@@ -1,5 +1,6 @@
 import NavSpacer from "../components/navSpacer/NavSpacer";
 import LgButton from "../components/button/LgButton";
+import { Link } from "react-router-dom";
 
 const NotFoundPage = () => {
   return (
@@ -12,8 +13,10 @@ const NotFoundPage = () => {
       }}
     >
       <NavSpacer />
-      <h3>Page Not Found</h3>
-      <LgButton name="Home" />
+      <h3 style={{ marginBottom: "20px" }}>Page Not Found</h3>
+      <Link to={"/"}>
+        <LgButton name="Home" />
+      </Link>
     </div>
   );
 };
