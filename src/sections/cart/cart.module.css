@@ -34,12 +34,12 @@
   -o-border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
-  background-color: #ffffff;
+  background-color: var(--card-background-color);
 }
 
 .cart_card a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -139,7 +139,7 @@
 .quantity_icon_subtract,
 .quantity_icon_add {
   cursor: pointer;
-  color: #222;
+  color: var(--text-color);
 }
 
 .quantity_icon_subtract:hover,
