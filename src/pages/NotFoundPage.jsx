@@ -8,6 +8,7 @@ const NotFoundPage = () => {
         backgroundColor: "var(--background-color) ",
         color: "var(--text-color)",
         paddingBottom: "20px",
+        textAlign: "center",
       }}
     >
       <NavSpacer />
